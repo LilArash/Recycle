@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: vazir;
+    src: url(./fonts/Vazirmatn[wght].ttf);
+}
+
+@layer base {
+    body {
+        @apply font-vazir;
+    }
+}
+
+body {
+  margin: 0;
+ 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
