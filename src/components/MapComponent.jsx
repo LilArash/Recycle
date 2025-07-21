@@ -41,7 +41,7 @@ export function MapComponent({ latitude, longitude }) {
     return (
         <div
             ref={mapContainer}
-            className="w-full h-56 rounded-lg border"
+            className="w-full h-72 rounded-lg border"
         />
     );
 }

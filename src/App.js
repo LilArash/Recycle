@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import { AddAdress } from './pages/AddAdress'
 import { AddressCard } from './components/AddressCard';
 import { AddressList } from './pages/AddressList';
+import { Test } from './components/test';
 import './App.css';
 
 function App() {

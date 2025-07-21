@@ -13,7 +13,7 @@ export function AddressList() {
     return (
         <div className="m-4">
             <h1 className="text-2xl mb-4">آدرس ها</h1>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="flex flex-col md:grid md:grid-cols-2 gap-4">
                 {
                     addresses.map((address, index) => {
 
