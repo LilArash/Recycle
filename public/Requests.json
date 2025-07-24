@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "amount": "زیاد",
+        "type": "خطرناک",
+        "deliverTime": "12-17 عصر"
+    },
+    {
+        "id": 2,
+        "amount": "کم",
+        "type": "خشک",
+        "deliverTime": "8-12 صبح"
+    },
+    {
+        "id": 3,
+        "amount": "متوسط",
+        "type": "الکترونیکی",
+        "deliverTime": "17-21 شب"
+    },
+    {
+        "id": 4,
+        "amount": "زیاد",
+        "type": "خطرناک",
+        "deliverTime": "12-17 عصر"
+    },
+    {
+        "id": 5,
+        "amount": "کم",
+        "type": "خطرناک",
+        "deliverTime": "12-17 عصر"
+    }
+]

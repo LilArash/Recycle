@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 
-export function MapComponent({ latitude, longitude }) {
+export function MapComponent({ latitude, longitude, width, height }) {
     const mapContainer = useRef(null);
 
     useEffect(() => {
@@ -41,7 +41,7 @@ export function MapComponent({ latitude, longitude }) {
     return (
         <div
             ref={mapContainer}
-            className="w-full h-72 rounded-lg border"
+            className={`w-${width} h-${height} rounded-lg border`}
         />
     );
 }
