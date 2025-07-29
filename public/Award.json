@@ -1,0 +1,39 @@
+[
+    {
+        "id": 1,
+        "name": "جایزه 1",
+        "lastUpdate": "04/05/06",
+        "neededPoint": "321"
+    },
+    {
+        "id": 2,
+        "name": "جایزه 2",
+        "lastUpdate": "04/05/06",
+        "neededPoint": "331"
+    },
+    {
+        "id": 3,
+        "name": "جایزه 3",
+        "lastUpdate": "04/05/06",
+        "neededPoint": "453"
+    },
+    {
+        "id": 4,
+        "name": "جایزه 4",
+        "lastUpdate": "04/05/06",
+        "neededPoint": "543"
+    },
+    {
+        "id": 5,
+        "name": "جایزه 5",
+        "lastUpdate": "04/05/06",
+        "neededPoint": "657"
+    },
+    {
+        "id": 6,
+        "name": "جایزه 6",
+        "lastUpdate": "04/05/06",
+        "neededPoint": "845"
+    }
+   
+]

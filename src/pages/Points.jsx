@@ -2,7 +2,29 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGift, faAngleLeft, faStar } from "@fortawesome/free-solid-svg-icons"
 import Gift from "../images/Gift.svg"
 import { AwardCard } from "../components/AwardCard"
+import { useEffect, useState } from "react"
 export function Points() {
+
+    const [points, setPoints] = useState()
+    const [awards, setAwards] = useState([])
+
+    useEffect(() => {
+        fetch('./Points.json')
+        .then((res) => res.json())
+        .then((data) => {
+             console.log(data);
+            setPoints(data)
+            console.log(points);
+            
+        })
+    }, [])
+
+    useEffect(() => {
+        fetch('/Award.json')
+        .then((res) => res.json())
+        .then((data) => setAwards(data))
+    }, [])
+
     return (
         <div className="m-4">
             <div className="flex w-full justify-between gap-4 items-center">
@@ -30,7 +52,7 @@ export function Points() {
                                 <span className="text-slate-400 mr-2 font-light">امتیاز شما:</span>
                             </div>
                             <span className="text-slate-400 font-light">
-                                1234 امتیاز
+                                {points?.yourPoints} امتیاز
                             </span>
                         </div>
                         <div className="flex justify-between py-2 px-4 bg-yellow-50 rounded-lg">
@@ -39,7 +61,7 @@ export function Points() {
                                 <span className="text-slate-400 mr-2 font-light">همه امتیازات:</span>
                             </div>
                             <span className="text-slate-400 font-light">
-                                1234 امتیاز
+                                {points?.allPoints} امتیاز
                             </span>
                         </div>
                         <div className="flex justify-between py-2 px-4 border rounded-lg">
@@ -48,7 +70,7 @@ export function Points() {
                                 <span className="text-slate-400 mr-2 font-light">استفاده شده:</span>
                             </div>
                             <span className="text-slate-400 font-light">
-                                1234 امتیاز
+                                {points?.used} امتیاز
                             </span>
                         </div>
                     </div>
@@ -59,12 +81,13 @@ export function Points() {
                 </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
-                <AwardCard />
-                <AwardCard />
-                <AwardCard />
-                <AwardCard />
-                <AwardCard />
-                <AwardCard />
+               {
+                    awards.map((award) => {
+                        return <AwardCard name={award.name} 
+                        lastUpdate={award.lastUpdate}
+                        neededPoint={award.neededPoint} key={award.id} />
+                    })
+               }
             </div>
         </div>
     )
