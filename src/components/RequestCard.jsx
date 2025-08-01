@@ -1,40 +1,22 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faSkullCrossbones, faSun } from "@fortawesome/free-solid-svg-icons"
+import { AmountBar } from "./AmountBar";
+import { useNavigate } from "react-router-dom";
 export function RequestCard({ id, amount, type, time, timeIcon, typeIcon, timeColor, typeColor }) {
 
-    function getBarAmount() {
-        switch (amount?.trim()) {
-            case "کم":
-                return 1;
-            case "متوسط":
-                return 2;
-            case "زیاد":
-                return 3;
-            default:
-                return 0;
-        }
-    }
+    const navigate = useNavigate()
 
-    function getBarColor() {
-        switch (amount?.trim()) {
-            case "کم":
-                return "bg-green-500";
-            case "متوسط":
-                return "bg-orange-400";
-            case "زیاد":
-                return "bg-red-500";
-            default:
-                return "bg-gray-300";
-        }
+    function handleClick() {
+        navigate(`/requests/${id}`,
+            {
+                state: {
+                    id, amount, type, time, timeIcon, typeIcon, timeColor, typeColor
+                }
+            }
+        )
     }
-
-    const barAmount = getBarAmount();
-    const barColor = getBarColor();
-    console.log(amount);
-    
 
     return (
-        <div className="p-4 rounded-lg flex justify-between border">
+        <div onClick={handleClick} className="p-4 rounded-lg flex justify-between border">
             <div className="flex flex-col ">
                 <span className="text-xl">درخواست #{id}</span>
                 <div className="*:text-gray-400 mr-4 mt-2">
@@ -44,16 +26,8 @@ export function RequestCard({ id, amount, type, time, timeIcon, typeIcon, timeCo
                 </div>
             </div>
             <div className="flex flex-col items-end gap-4">
-                <span className="size-2 block rounded-full bg-green-500"></span>
-                <div className="flex flex-row-reverse gap-1 mt-2 *:h-2 *:w-24 *:rounded-3xl ">
-                    {[0, 1, 2].map((i) => (
-                        <div
-                            key={i}
-                            className={`h-2 w-20 rounded-full ${i < barAmount ? barColor : "bg-gray-300"
-                                }`}
-                        ></div>
-                    ))}
-                </div>
+                <span className="size-2 block rounded-full bg-green-500 mb-3"></span>
+                <AmountBar amount={amount} width="w-20" />
                 <FontAwesomeIcon className={typeColor} icon={typeIcon} />
                 <FontAwesomeIcon className={timeColor} icon={timeIcon} />
             </div>

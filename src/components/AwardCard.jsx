@@ -2,7 +2,21 @@ import cg from "../images/cg.jpg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faAngleLeft, faPlus, faMinus } from "@fortawesome/free-solid-svg-icons"
 import { useState } from "react"
-export function AwardCard({ name, lastUpdate, neededPoint }) {
+import { useNavigate } from "react-router-dom"
+
+export function AwardCard({ id, name, lastUpdate, neededPoint }) {
+
+    const navigate = useNavigate()
+
+    function handleClick() {
+        navigate(`/Awards/${id}`,
+            {
+                state: {
+                    id, name, lastUpdate, neededPoint
+                }
+            }
+        )
+    }
 
     const [count, setCount] = useState(0)
 
@@ -15,7 +29,7 @@ export function AwardCard({ name, lastUpdate, neededPoint }) {
     }
 
     return (
-        <div className="relative border rounded-xl w-full">
+        <div onClick={handleClick} className="relative border rounded-xl w-full">
             <div className="flex gap-4 p-4">
                 <div className="size-36 rounded-lg overflow-hidden">
                     <img className="w-full h-full object-cover" src={cg} alt="award-icon" />

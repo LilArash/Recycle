@@ -47,16 +47,16 @@ export function Requests() {
 
                 requests.length === 0 ?
                     <div className="flex flex-col justify-center items-center min-h-[70vh]">
-                        
-                            <div>
-                                <img src={NotFound} alt="not-found-icon" />
-                            </div>
-                            <h2 className="text-lime-500 text-3xl">
-                                درخواستی یافت نشد!
-                            </h2>
-                        
+
+                        <div>
+                            <img src={NotFound} alt="not-found-icon" />
+                        </div>
+                        <h2 className="text-lime-500 text-3xl">
+                            درخواستی یافت نشد!
+                        </h2>
+
                     </div> :
-                    <div className="flex flex-col md:grid md:grid-cols-2 gap-4">
+                    <div className="flex flex-col lg:grid lg:grid-cols-2 gap-4">
                         {
 
                             requests.map((request) => {

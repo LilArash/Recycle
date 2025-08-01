@@ -85,7 +85,7 @@ export function Points() {
                     awards.map((award) => {
                         return <AwardCard name={award.name} 
                         lastUpdate={award.lastUpdate}
-                        neededPoint={award.neededPoint} key={award.id} />
+                        neededPoint={award.neededPoint} key={award.id} id={award.id} />
                     })
                }
             </div>
