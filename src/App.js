@@ -17,15 +17,15 @@ function App() {
 
 
 
-    <Routes>
-      <Route path="/requests" element={<Requests />} />
-      <Route path="/requests/:id" element={<RequestDetail />} />
-      <Route path="/awards" element={<Points />} />
-      <Route path="/awards/:id" element={< AwardDetail />} />
-    </Routes>
-    // <div>
-    //   <AwardDetail />
-    // </div>
+    // <Routes>
+    //   <Route path="/requests" element={<Requests />} />
+    //   <Route path="/requests/:id" element={<RequestDetail />} />
+    //   <Route path="/awards" element={<Points />} />
+    //   <Route path="/awards/:id" element={< AwardDetail />} />
+    // </Routes>
+    <div>
+      <AddRequest />
+    </div>
 
   );
 }

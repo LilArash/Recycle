@@ -103,7 +103,7 @@ export function RequestDetail() {
                         </div>
                         <div className="flex justify-between items-center">
                             <span className="text-gray-500">امتیازهای دریافتی</span>
-                            <div className="flex items-center gap-1">
+                            <div className="flex items-baseline gap-1">
                                 <span className="text-yellow-500">{requestData.recievingPoints}</span>
                                 <FontAwesomeIcon className="text-yellow-500 text-xl" icon={faStar} />
                             </div>
