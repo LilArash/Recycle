@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowRight, faSkullCrossbones, faTrashCan, faClockFour, faWeightScale, faTruck, faCalendarCheck, faStar, faDumpster, faPlug } from "@fortawesome/free-solid-svg-icons"
 import { AmountBar } from "../components/AmountBar"
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation, useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 export function RequestDetail() {
@@ -11,7 +11,7 @@ export function RequestDetail() {
     const [loading, setLoading] = useState(true);
     const location = useLocation()
     const data = location.state
-    
+
 
 
     useEffect(() => {
@@ -56,10 +56,12 @@ export function RequestDetail() {
 
     return (
         <div className="m-8">
-            <div className="flex items-center gap-2">
-                <FontAwesomeIcon className="text-gray-500" icon={faArrowRight} />
-                <p className="text-gray-500">بازگشت به صفحه درخواست ها</p>
-            </div>
+            <Link to="/requests">
+                <div className="flex items-center gap-2">
+                    <FontAwesomeIcon className="text-gray-500" icon={faArrowRight} />
+                    <p className="text-gray-500">بازگشت به صفحه درخواست ها</p>
+                </div>
+            </Link>
             <div className="flex justify-between mt-6">
                 <div className="flex flex-col w-full">
                     <span className="text-xs text-gray-500">04/05/10 14:58</span>
@@ -72,14 +74,14 @@ export function RequestDetail() {
                             <span className="text-gray-500">وضعیت درخواست:</span>
                             <div className="flex items-center gap-2">
                                 <span className="text-orange-400">{requestData.status}</span>
-                                <div className="size-4 bg-orange-200 rounded-full flex items-center justify-center">
-                                    <div className="size-2 bg-orange-500 rounded-full"></div>
+                                <div className="size-4 rounded-full flex items-center justify-center">
+                                    <div className="size-2 bg-orange-500 rounded-full animate-pulse-shadow"></div>
                                 </div>
                             </div>
                         </div>
                         <div className="flex justify-between items-center flex-wrap">
                             <span className="text-gray-500">مقدار: {requestData.amount}</span>
-                            <AmountBar amount={requestData.amount} width="min-w-32" />
+                            <AmountBar amount={requestData.amount} size="w-16 sm:w-24 md:w-32" />
                         </div>
                         <div className="flex items-center gap-4">
                             <FontAwesomeIcon className={`${typeIcon.color} text-xl`} icon={typeIcon.icon} />
@@ -111,7 +113,7 @@ export function RequestDetail() {
                     </div>
                     <div className="mt-8 mr-4">
                         <p className="text-gray-500">
-                            • لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد. {requestData.desc}
+                            • {requestData.desc}
                         </p>
                     </div>
                 </div>

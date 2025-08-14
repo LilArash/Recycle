@@ -16,7 +16,7 @@ export function RequestCard({ id, amount, type, time, timeIcon, typeIcon, timeCo
     }
 
     return (
-        <div onClick={handleClick} className="p-4 rounded-lg flex justify-between border">
+        <div onClick={handleClick} className="p-4 rounded-lg flex justify-between border cursor-pointer hover:border-green-500 hover:bg-green-50 transition-all">
             <div className="flex flex-col ">
                 <span className="text-xl">درخواست #{id}</span>
                 <div className="*:text-gray-400 mr-4 mt-2">
@@ -27,7 +27,7 @@ export function RequestCard({ id, amount, type, time, timeIcon, typeIcon, timeCo
             </div>
             <div className="flex flex-col items-end gap-4">
                 <span className="size-2 block rounded-full bg-green-500 mb-3"></span>
-                <AmountBar amount={amount} width="w-20" />
+                <AmountBar amount={amount} size="w-16 md:w-20" />
                 <FontAwesomeIcon className={typeColor} icon={typeIcon} />
                 <FontAwesomeIcon className={timeColor} icon={timeIcon} />
             </div>

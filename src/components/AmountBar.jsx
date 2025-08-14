@@ -1,4 +1,12 @@
-export function AmountBar({ amount, width = "w-32" }) {
+export function AmountBar({ amount, size = "md" }) {
+
+    const widthClass = size === "sm"
+        ? "w-16"
+        : size === "lg"
+        ? "w-40"
+        : size === "md"
+        ? "w-32"
+        : size;
 
     function getBarAmount() {
         switch (amount?.trim()) {
@@ -33,7 +41,7 @@ export function AmountBar({ amount, width = "w-32" }) {
             {[0, 1, 2].map((i) => (
                 <div
                     key={i}
-                    className={`h-2 ${width} rounded-full ${i < barAmount ? barColor : "bg-gray-300"
+                    className={`h-2 ${widthClass} rounded-full ${i < barAmount ? barColor : "bg-gray-300"
                         }`}
                 ></div>
             ))}

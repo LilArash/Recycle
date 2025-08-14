@@ -3,7 +3,7 @@ import { faArrowRight, faStar, faPlus, faMinus, faAngleLeft } from "@fortawesome
 import Gift from "../images/cg.jpg"
 import wcg from "../images/wcg.jpg"
 import { useEffect, useState } from "react"
-import { useParams, useLocation } from "react-router-dom"
+import { useParams, useLocation, Link } from "react-router-dom"
 
 export function AwardDetail() {
 
@@ -39,15 +39,17 @@ export function AwardDetail() {
         fetchData()
     }, [id])
 
-    if(loading) return <p className="m-8">درحال بارگذاری...</p>;
-    if(!awardData) return <p className="m-8 text-red-500">جایزه ای با این شناسه یافت نشد</p>;
+    if (loading) return <p className="m-8">درحال بارگذاری...</p>;
+    if (!awardData) return <p className="m-8 text-red-500">جایزه ای با این شناسه یافت نشد</p>;
 
     return (
         <div className="m-8">
-            <div className="flex items-center gap-2">
-                <FontAwesomeIcon className="text-gray-500" icon={faArrowRight} />
-                <p className="text-gray-500">بازگشت به صفحه جوایز</p>
-            </div>
+            <Link to="/awards">
+                <div className="flex items-center gap-2">
+                    <FontAwesomeIcon className="text-gray-500" icon={faArrowRight} />
+                    <p className="text-gray-500">بازگشت به صفحه جوایز</p>
+                </div>f
+            </Link>
             <div className="max-w-4xl mx-auto mt-8">
 
                 <div className="text-xs text-gray-500">04/05/11 10:33</div>
