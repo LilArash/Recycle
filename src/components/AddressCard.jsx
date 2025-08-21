@@ -24,7 +24,7 @@ export function AddressCard({ title, address, number, lng, lat }) {
                                             backgroundSize: "contain",
                                             
                                         }}
-                                        className="h-10 w-14 flex items-center justify-center relative text-white text-lg right-[-11px]"
+                                        className="size-[3.5rem] flex items-center justify-center relative text-white text-xl right-[-5px]"
                                     >
                                         {number}
                                     </div>
@@ -32,7 +32,7 @@ export function AddressCard({ title, address, number, lng, lat }) {
 
                             </div>
 
-                            <div className="relative right-[-15px]">
+                            <div className="relative right-[-5px]">
                                 <h2 className="text-gray-700 text-xl">{title}</h2>
                                 <p className="text-gray-400">{address}</p>
                             </div>
