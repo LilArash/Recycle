@@ -3,7 +3,7 @@ import { faDumpster, faPlug, faSkullCrossbones, faSun } from "@fortawesome/free-
 import { faSun as regSun, faMoon } from "@fortawesome/free-regular-svg-icons"
 import NotFound from "../images/NotFound.svg"
 import { RequestCard } from "../components/RequestCard"
-export function Requests() {
+export function AllRequests() {
     const [requests, setRequest] = useState([])
 
     function getTypeIcon(type) {
@@ -30,7 +30,7 @@ export function Requests() {
     }
 
     useEffect(() => {
-        fetch('/Requests.json')
+        fetch('/AllRequests.json')
             .then((res) => res.json())
             .then((data) => {
                 setRequest(data);
@@ -42,7 +42,7 @@ export function Requests() {
 
     return (
         <div className="m-4">
-            <h1 className="text-2xl mb-4">درخواست ها</h1>
+            <h1 className="text-2xl mb-4">همه درخواست‌ها</h1>
             {
 
                 requests.length === 0 ?
@@ -72,7 +72,7 @@ export function Requests() {
                                     timeIcon={timeIcon.icon}
                                     typeColor={typeIcon.color}
                                     timeColor={timeIcon.color} 
-                                    page='requests'/>
+                                    page='allreqs'/>
                             })
                         }
                     </div>
