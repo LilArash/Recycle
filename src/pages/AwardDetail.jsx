@@ -48,7 +48,7 @@ export function AwardDetail() {
                 <div className="flex items-center gap-2">
                     <FontAwesomeIcon className="text-gray-500" icon={faArrowRight} />
                     <p className="text-gray-500">بازگشت به صفحه جوایز</p>
-                </div>f
+                </div>
             </Link>
             <div className="max-w-4xl mx-auto mt-8">
 

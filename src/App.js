@@ -8,6 +8,10 @@ import { AwardDetail } from './pages/AwardDetail';
 import { AllRequests } from './admin/AllRequests';
 import { AllRequestDetail } from './admin/AllRequestDetail'
 import { DriversStatus } from './admin/DriversStatus';
+import { AddAward } from './admin/addaward';
+import { RegisteredAwards } from './admin/RegisteredAwards';
+import { RegAwardDetail } from './admin/RegAwardDetail';
+import { DriverLoc } from './admin/DriverLoc';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 
@@ -27,6 +31,10 @@ function App() {
       <Route path="/allreqs" element={< AllRequests />} />
       <Route path="/allreqs/:id" element={<AllRequestDetail />} />
       <Route path="/driversstatus" element={<DriversStatus />} />
+      <Route path="/addaward" element={<AddAward />} />
+      <Route path="/registeredawards" element={<RegisteredAwards />} />
+      <Route path="/registeredawards/:id" element={<RegAwardDetail />} />
+      <Route path="/driverlocation" element={<DriverLoc />} />
     </Routes>
 
   );

@@ -5,7 +5,8 @@
         "lastUpdate": "04/05/06",
         "neededPoint": "321",
         "desc": "abcdefg",
-        "src": "../wcg1.jpg"
+        "src": "../wcg1.jpg",
+        "status": "فعال"
     },
     {
         "id": 2,
@@ -13,7 +14,8 @@
         "lastUpdate": "04/05/06",
         "neededPoint": "331",
         "desc": "aaaaaaa",
-        "src": "../wcg2.jpg"
+        "src": "../wcg2.jpg",
+        "status": "فعال"
     },
     {
         "id": 3,
@@ -21,7 +23,8 @@
         "lastUpdate": "04/05/06",
         "neededPoint": "453",
         "desc": "ssssss",
-         "src": "../wcg3.jpg"
+         "src": "../wcg3.jpg",
+         "status": "فعال"
     },
     {
         "id": 4,
@@ -29,7 +32,8 @@
         "lastUpdate": "04/05/06",
         "neededPoint": "543",
         "desc": "yyyyyyyyy",
-         "src": "../wcg1.jpg"
+         "src": "../wcg1.jpg",
+         "status": "فعال"
     },
     {
         "id": 5,
@@ -37,7 +41,8 @@
         "lastUpdate": "04/05/06",
         "neededPoint": "657",
         "desc": "wwwwwww",
-         "src": "../wcg3.jpg"
+         "src": "../wcg3.jpg",
+         "status": "فعال"
     },
     {
         "id": 6,
@@ -45,7 +50,8 @@
         "lastUpdate": "04/05/06",
         "neededPoint": "845",
         "desc": "hhhhhhhhh",
-         "src": "../wcg2.jpg"
+         "src": "../wcg2.jpg",
+         "status": "فعال"
     }
    
 ]
